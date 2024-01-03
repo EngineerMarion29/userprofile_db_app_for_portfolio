@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create User Profile</title>
+  <style>
+    /* Add your custom CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Create User Profile</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form.non_field_errors }}
+
+    <div class="fieldWrapper">
+      {{ form.first_name.label_tag }}
+      {{ form.first_name }}
+      {{ form.first_name.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.last_name.label_tag }}
+      {{ form.last_name }}
+      {{ form.last_name.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.email.label_tag }}
+      {{ form.email }}
+      {{ form.email.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.password.label_tag }}
+      {{ form.password }}
+      {{ form.password.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.age.label_tag }}
+      {{ form.age }}
+      {{ form.age.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.resume.label_tag }}
+      {{ form.resume }}
+      {{ form.resume.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.gender.label_tag }}
+      {{ form.gender }}
+      {{ form.gender.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.education_course_name.label_tag }}
+      {{ form.education_course_name }}
+      {{ form.education_course_name.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.certifications.label_tag }}
+      {{ form.certifications }}
+      {{ form.certifications.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.most_recent_job.label_tag }}
+      {{ form.most_recent_job }}
+      {{ form.most_recent_job.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.linkedin_url.label_tag }}
+      {{ form.linkedin_url }}
+      {{ form.linkedin_url.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.job_appfor.label_tag }}
+      {{ form.job_appfor }}
+      {{ form.job_appfor.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.years_of_experience.label_tag }}
+      {{ form.years_of_experience }}
+      {{ form.years_of_experience.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.previous_company.label_tag }}
+      {{ form.previous_company }}
+      {{ form.previous_company.errors }}
+    </div>
+
+    <div class="fieldWrapper">
+      {{ form.Applying_For.label_tag }}
+      {{ form.Applying_For }}
+      {{ form.Applying_For.errors }}
+    </div>
+    <input type="submit" value="Save" name="_save">
+    <input type="submit" value="Save and Add Another" name="_addanother">
+  </form>
+</body>
+</html>
